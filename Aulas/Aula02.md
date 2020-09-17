@@ -1,6 +1,6 @@
 ### Aula 02: O que é um Sistema Operacional?
 
-*Aula disponível em:* 
+*Aula disponível em:* https://www.youtube.com/watch?v=WRo09dUMkEY&list=PLzZut2slkqyyO_FUNxbcKIYmGK6dZNbkV&index=3
 
 **Sistema Operacional:** conjunto de um ou mais programas que fornecem um conjunto de serviços e cria uma interface entre aplicações e o hardware do computador, alocando recursos compartilhados entre os processos.
 
