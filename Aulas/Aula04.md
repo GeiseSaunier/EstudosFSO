@@ -5,6 +5,7 @@
 **Definição de Processos:** 
 
 De forma simples, um processo é um programa em execução. Associado a cada processo está o seu espaço de endereçamento e uma lista de posições de memória que este processo pode ler e escrever.
+**Processo:** é uma instância de um programa em execução.
 
 **Monoprogramação:** apenas um processo em execução.
 
