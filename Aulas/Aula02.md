@@ -61,9 +61,9 @@ De forma mais simples, im SO é um conjunto de programas, cujo objetivo é geren
 
 **Técnicas de Organização do sistema**
 
-* Monolítico: um "programa" só que faz tudo (kernel);
+* Monolítico: Um sistema monolítico é construído como uma coleção de rotinas onde cada uma pode chamar qualquer outra. 
 * Camadas: tem níveis de abstração em relação ao kernel;
-* Microkernel: cria um kernel muito pequeno e depois pendura outros módulos em cima do kernel;
+* Microkernel: cria um kernel muito pequeno e depois pendura outros módulos em cima do kernel, isto é, possui separação de funções chamadas servidores.
     * Minix
     * GNU Hurd
     * Mach (roda na apple)
