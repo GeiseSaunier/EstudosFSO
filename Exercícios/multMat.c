@@ -1,6 +1,6 @@
 /*
 - Problema: https://moj.naquadah.com.br/contests/bcrFSO20201-exerciciofork/multiplica-matriz-fork.html#fnref1
-- Codigo por: Erick Giffoni
+- Codigo por: Erick Giffoni e Geise Saunier
 - Universidade de Brasilia
 */
 
