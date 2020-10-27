@@ -65,10 +65,7 @@ void imprimeResultado(int signal){
     }
 }
 
-void* multThread1(void * arg) {
-
-    int *matResultado1 = (int *)arg;
-
+void* multThread1() {
     for (int linha = 0; linha < dimensao; linha++){
         if(linha > (dimensao/2)-1 )
             break;
@@ -80,14 +77,11 @@ void* multThread1(void * arg) {
     }
 }
 
-void* multThread2(void * arg) {
-
-    int *matResultado2 = (int *)arg;
-
+void* multThread2() {
     for (int linha = (dimensao/2); linha < dimensao; linha++){
         for (int coluna = 0; coluna < dimensao; coluna++){
             for (int var = 0; var < dimensao; var++){
-                matResultado2[linha][coluna] += mat1[linha][var] * mat2[var][coluna];
+                matResultado[linha][coluna] += mat1[linha][var] * mat2[var][coluna];
             }
         }
     }
@@ -110,8 +104,10 @@ int main(){
     //criar 2 filhos: cada um calcula o produto de um pedaco da matriz
     pthread_t thread1, thread2;
 
-    pthread_create(&thread1, NULL, multThread1, &matResultado);
-    pthread_create(&thread2, NULL, multThread2, &matResultado);
+    pthread_create(&thread1, NULL, multThread1, NULL);
+    pthread_kill(thread1, SIGTERM);
+    pthread_join(thread1, NULL);
+    pthread_create(&thread2, NULL, multThread2, NULL);
 
 
         else{//pai fica aqui
