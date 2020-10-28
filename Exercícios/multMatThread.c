@@ -48,8 +48,8 @@ int main(){
     pthread_t thread1, thread2;
 
     pthread_create(&thread1, NULL, multThread1, NULL);
-    pthread_create(&thread2, NULL, multThread2, NULL);
     pthread_join(thread1, NULL);
+    pthread_create(&thread2, NULL, multThread2, NULL);
     pthread_join(thread2, NULL);
 
     for (int i = 0; i < dimensao; i++){
