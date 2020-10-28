@@ -6,28 +6,24 @@
 
 int v[SIZE];
 
-void *function(void *arg)
-{
+void *function(void *arg){
+    
     int *valor = (int *)(arg);
     int i;
-    if (*valor == 1)
-    {
-        for (i = 0; i < SIZE / 2; i++)
-        {
+    if (*valor == 1){
+        for (i = 0; i < SIZE / 2; i++){
             v[1] = 1;
         }
     }
-    else
-    {
-        for (i = SIZE / 2; i < SIZE; i++)
-        {
+    else{
+        for (i = SIZE / 2; i < SIZE; i++){
             v[i] = 2;
         }
     }
 }
 
-int main()
-{
+int main(){
+
     pthread_t t1, t2;
     int a1 = 1;
     int a2 = 2;
@@ -39,8 +35,7 @@ int main()
     pthread_join(t1, NULL);
     pthread_join(t2, NULL);
 
-    for (i = 0; i < SIZE; i++)
-    {
+    for (i = 0; i < SIZE; i++){
         printf("%d", v[i]);
     }
 
